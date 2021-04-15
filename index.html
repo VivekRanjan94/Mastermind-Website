@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastermind</title>
+    <link rel="stylesheet" href="style.css">
+    <script src = "home.js" defer></script>
+</head>
+<body>
+    <div class="container">
+       <div class="header">
+            <p class="mastermind">Mastermind</p>
+        </div>
+        <div class="guess-cont">
+            <p class="prompt">Enter Guess - </p>
+            <input type="number" name="guess" id="guess">
+            <button type="submit" id="submit" onclick="update()">Submit</button>
+            <button id="reset" onclick="reset()">Reset</button>
+        </div>
+        <div class="table-cont">
+            <p class="table-title">Guesses</p>
+            <table class="table" id="guess-table">
+                <thead>
+                    <tr>
+                        <th>Guess</th>
+                        <th>Correct Digit</th>
+                        <th>Correct Position</th>
+                    </tr>
+                </thead>
+            </table>
+        </div> 
+    </div>
+    
+</body>
+</html>

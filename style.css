@@ -1,0 +1,75 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded, sans-serif;
+  font-weight: 600;
+}
+
+body {
+  background: linear-gradient(to right, #00AAFF, #00FF6C);
+}
+
+.container {
+  margin:auto;
+  width:auto;
+  text-align: center;
+}
+
+.mastermind {
+  font-size: 3em;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+#guess {
+  font-weight: 500;
+  padding: 3px;
+  border:none;
+  border-radius: 3px;
+  outline:none;
+  background-color: rgba(255, 255, 255, 0.5);
+  display:inline-block;
+}
+
+.prompt {
+  margin-bottom: 0;
+  display: inline-block;
+}
+
+button {
+  padding: 3px 5px;
+  border:none;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  cursor: grab;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.guess-cont {
+  margin-bottom: 2em;
+}
+
+.table {
+  font-size: 1em;
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  width:100%;
+}
+
+td, th {
+  text-align: center;
+  width: 33%;
+}
+
+.table-title {
+  font-size: 2em;
+}
