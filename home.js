@@ -5,9 +5,10 @@ const display = document.querySelector('#display')
 const submit = document.querySelector('#submit')
 const resetbtn = document.querySelector('#reset')
 const table = document.querySelector('#guess-table')
+const select = document.querySelector('#numOfDigits')
 
-const numOfDigits = 4
-const numOfAttempts = 10
+var numOfDigits = 4
+var numOfAttempts = 10
 var num = setNum()
 var guess = 0
 var count = 0
@@ -78,19 +79,19 @@ function main() {
 }
 
 function setNum() {
-  var num = Math.floor(Math.random() * 10000)
-  while(checkRepeat(num) || num<999) {
-    num = Math.floor(Math.random() * 10000)
+  let max = Math.pow(10, numOfDigits)
+  var num = Math.floor(Math.random() * max)
+  while(checkRepeat(num) || num<(max/10)-1) {
+    num = Math.floor(Math.random() * max)
   }
-  numstr = num.toString()
   console.log(num)
   return num
 }
 
 function checkRepeat(number) {
   num = number.toString()
-  for(let i = 0; i<4; i++) {
-    for(let j = 0; j<4; j++) {
+  for(let i = 0; i<numOfDigits; i++) {
+    for(let j = 0; j<numOfDigits; j++) {
       if(i!=j && (num.charAt(i) == num.charAt(j))) {
         return true
       }
@@ -120,5 +121,10 @@ submit.addEventListener('click', () => {
 })
 
 resetbtn.addEventListener('click' , () => {
+  reset()
+})
+
+select.addEventListener('change', () => {
+  numOfDigits = select.options[select.selectedIndex].value
   reset()
 })

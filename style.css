@@ -89,3 +89,8 @@ td, th {
 .table-title {
   font-size: 2em;
 }
+
+select {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
